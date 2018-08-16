@@ -11,4 +11,5 @@ export class MakeService {
 		return this.http.get('/api/makes')
 			.map(res => res.json());
 	}
+
 }
