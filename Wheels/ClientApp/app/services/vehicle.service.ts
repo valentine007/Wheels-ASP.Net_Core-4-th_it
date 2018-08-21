@@ -13,7 +13,7 @@ export class VehicleService {
 	}
 
 	getFeatures() {
-		return this.http.get('/api/features')
+		return this.http.get('/api/vehicle/features')
 			.map(res => res.json());
 	}
 
