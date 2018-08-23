@@ -8,7 +8,7 @@ using Wheels.Persistence;
 
 namespace Wheels.Migrations
 {
-    [DbContext(typeof(WheelsDBContext))]
+    [DbContext(typeof(WheelsDbContext))]
     partial class WheelsDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

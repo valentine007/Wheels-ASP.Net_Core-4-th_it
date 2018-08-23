@@ -7,12 +7,13 @@ using Wheels.Models;
 
 namespace Wheels.Persistence
 {
-	public class WheelsDBContext : DbContext
+	public class WheelsDbContext : DbContext
 	{
+		public DbSet<Vehicle> Vehicles { get; set; }
 		public DbSet<Make> Makes { get; set; }
 		public DbSet<Feature> Features { get; set; }
 
-		public WheelsDBContext(DbContextOptions<WheelsDBContext> options) : base(options)
+		public WheelsDbContext(DbContextOptions<WheelsDbContext> options) : base(options)
 		{
 
 		}

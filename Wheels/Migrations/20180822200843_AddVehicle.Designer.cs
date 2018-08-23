@@ -9,7 +9,7 @@ using Wheels.Persistence;
 
 namespace Wheels.Migrations
 {
-    [DbContext(typeof(WheelsDBContext))]
+    [DbContext(typeof(WheelsDbContext))]
     [Migration("20180822200843_AddVehicle")]
     partial class AddVehicle
     {

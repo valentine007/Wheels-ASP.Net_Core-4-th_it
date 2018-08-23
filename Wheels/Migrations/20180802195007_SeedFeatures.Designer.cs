@@ -8,7 +8,7 @@ using Wheels.Persistence;
 
 namespace Wheels.Migrations
 {
-    [DbContext(typeof(WheelsDBContext))]
+    [DbContext(typeof(WheelsDbContext))]
     [Migration("20180802195007_SeedFeatures")]
     partial class SeedFeatures
     {

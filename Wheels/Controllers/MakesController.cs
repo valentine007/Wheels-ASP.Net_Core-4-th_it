@@ -13,10 +13,10 @@ namespace Wheels.Controllers
 {
     public class MakesController : Controller
     {
-		private readonly WheelsDBContext context;
+		private readonly WheelsDbContext context;
 		private readonly IMapper mapper;
 
-		public MakesController(WheelsDBContext context, IMapper mapper)
+		public MakesController(WheelsDbContext context, IMapper mapper)
 		{
 			this.context = context;
 			this.mapper = mapper;

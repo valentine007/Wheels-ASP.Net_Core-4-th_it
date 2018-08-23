@@ -11,9 +11,9 @@ namespace vega.Controllers
 {
 	public class FeaturesController : Controller
 	{
-		private readonly WheelsDBContext context;
+		private readonly WheelsDbContext context;
 		private readonly IMapper mapper;
-		public FeaturesController(WheelsDBContext context, IMapper mapper)
+		public FeaturesController(WheelsDbContext context, IMapper mapper)
 		{
 			this.mapper = mapper;
 			this.context = context;
