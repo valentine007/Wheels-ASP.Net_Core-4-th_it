@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Wheels.Controllers.Resources;
+using Wheels.Models;
 
 namespace Wheels.Controllers
 {
@@ -10,9 +13,17 @@ namespace Wheels.Controllers
 
     public class VehicleController : Controller
     {
-		[HttpPost]
-		public IActionResult CreateVehicle(VehicleController vehicle)
+		private readonly IMapper mapper;
+
+		public VehicleController(IMapper mapper)
 		{
+			this.mapper = mapper;
+		}
+
+		[HttpPost]
+		public IActionResult CreateVehicle(VehicleResource vehicleResource)
+		{
+			var vehicle = mapper.Map<VehicleResource, Vehicle>(vehicleResource);
 			return Ok(vehicle);
 		}
     }
