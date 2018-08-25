@@ -11,11 +11,9 @@ using Wheels.Persistence;
 namespace Wheels.Controllers
 {
 	[Route("/api/vehicles")]
-
     public class VehicleController : Controller
     {
 		private readonly IMapper mapper;
-
 		private readonly WheelsDbContext context;
 
 		public VehicleController(IMapper mapper, WheelsDbContext context)
@@ -25,8 +23,11 @@ namespace Wheels.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> CreateVehicle(VehicleResource vehicleResource)
+		public async Task<IActionResult> CreateVehicle([FromBody]VehicleResource vehicleResource)
 		{
+			if (!ModelState.IsValid)
+				return BadRequest(ModelState);
+
 			var vehicle = mapper.Map<VehicleResource, Vehicle>(vehicleResource);
 			vehicle.LastUpdate = DateTime.Now;
 
