@@ -27,6 +27,8 @@ namespace Wheels
         {
 			services.AddScoped<IVehicleRepository, VehicleRepository>();
 
+			services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 			services.AddAutoMapper();
 
 			services.AddDbContext<WheelsDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
