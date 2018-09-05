@@ -1,12 +1,13 @@
 import { VehicleService } from '../../../services/vehicle.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; // ÇÄÅÑÜ ÒĞÀÁË!!!!
+
 
 @Component({
 	selector: 'app-vehicle-form',
 	templateUrl: './vehicle-form.component.html',
 	styleUrls: ['./vehicle-form.component.css']
 })
-export class VehicleFormComponent implements OnInit {
+export class VehicleFormComponent implements OnInit {	// Èëè çäåñü!!!
 	makes: any[];
 	models: any[];
 	features: any[];
@@ -17,8 +18,10 @@ export class VehicleFormComponent implements OnInit {
 	constructor(private vehicleService: VehicleService) { }
 
 	ngOnInit() {
+
 		this.vehicleService.getMakes().subscribe(makes =>
 			this.makes = makes);
+			
 
 		this.vehicleService.getFeatures().subscribe(features =>
 			this.features = features);

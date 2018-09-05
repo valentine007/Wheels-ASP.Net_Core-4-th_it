@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
-		"noImplicitAny": false,
+			"noImplicitAny": false,
+			"strictNullChecks": false,
 		"module": "es2015",
 		"moduleResolution": "node",
 		"target": "es5",

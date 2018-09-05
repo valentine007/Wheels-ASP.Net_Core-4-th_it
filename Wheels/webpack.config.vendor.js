@@ -73,8 +73,8 @@ module.exports = (env) => {
 
     const serverBundleConfig = merge(sharedConfig, {
         target: 'node',
-        resolve: { mainFields: ['main'] },
-        entry: { vendor: allModules.concat(['aspnet-prerendering']) },
+		resolve: { mainFields: ['main'] },
+		entry: { vendor: allModules.concat(['aspnet-prerendering']) },
         output: {
             path: path.join(__dirname, 'ClientApp', 'dist'),
             libraryTarget: 'commonjs2',

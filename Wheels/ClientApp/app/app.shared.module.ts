@@ -13,6 +13,7 @@ import { VehicleFormComponent } from './components/vehicle-module/vehicle-form/v
 import { VehicleService } from './services/vehicle.service';
 
 @NgModule({
+	bootstrap: [AppComponent],
     declarations: [
         AppComponent,
         NavMenuComponent,
