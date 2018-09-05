@@ -1,5 +1,5 @@
 import { VehicleService } from '../../../services/vehicle.service';
-import { Component, OnInit } from '@angular/core'; // «ƒ≈—‹ “–¿¡À!!!!
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core'; // «ƒ≈—‹ “–¿¡À!!!!
 	templateUrl: './vehicle-form.component.html',
 	styleUrls: ['./vehicle-form.component.css']
 })
-export class VehicleFormComponent implements OnInit {	// »ÎË Á‰ÂÒ¸!!!
+export class VehicleFormComponent implements OnInit {
 	makes: any[];
 	models: any[];
 	features: any[];
